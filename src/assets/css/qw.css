@@ -1,0 +1,6 @@
+.impowerBox{
+    width: 300px;
+}
+.impowerBox .title{
+    display: none;
+}

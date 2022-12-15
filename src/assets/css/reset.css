@@ -1,0 +1,563 @@
+/*
+ * 在 normalize.css 基础上进行的其他重置
+ */
+ * {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  /* AntD 字体家族：https://ant.design/docs/spec/font-cn#%E5%AD%97%E4%BD%93%E5%AE%B6%E6%97%8F */
+  font-family:  "微软雅黑","Microsoft YaHei","苹方-简","Arial",sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  border: none; /* 去掉浏览器默认的 input 边框样式 */
+  outline: none; /* 去掉浏览器默认的聚焦时候的蓝色边框 */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  padding:0
+}
+
+i,a{
+  font-style: normal;
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 5px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+/*滚动条里面小方块*/
+border-radius: 10px;
+box-shadow   : inset 0 0 5px slategray;
+background   : #304156;
+}
+/* ::-webkit-scrollbar-track { */
+/*滚动条里面轨道*/
+/* box-shadow   : inset 0 0 5px slategray;
+border-radius: 10px;
+background   : #ededed; */
+  /* } */
+/********************字体颜色**************************/
+/*
+ *   标准颜色
+ * 后缀包含数字 , 从上至下越来越深
+*/
+.t-color-primary{
+  color: #1D2088;
+}
+.t-color-primary-0{
+  color: #E8EDFF;
+}
+.t-color-primary-1{
+  color: #B2BBE7;
+}
+.t-color-primary-2{
+  color: #838DCF;
+}
+.t-color-primary-3{
+  color: #5A64B8;
+}
+.t-color-primary-4{
+  color: #383FA0;
+}
+.t-color-primary-5{
+  color: #1D2088;
+}
+.t-color-primary-6{
+  color: #131379;
+}
+.t-color-primary-7{
+  color: #0B055B;
+}
+.t-color-primary-8{
+  color: #08004D;
+}
+/*标准橙色 后缀包含数字 , 从上至下越来越深*/
+.t-color-orange{
+  color:#F6AD3C;
+}
+.t-color-orange-0{
+  color:#FFFAE8;
+}
+.t-color-orange-1{
+  color:#FDEEC5;
+}
+.t-color-orange-2{
+  color:#FBE1A2;
+}
+.t-color-orange-3{
+  color:#FAD17F;
+}
+.t-color-orange-4{
+  color:#F8BF5D;
+}
+.t-color-orange-5{
+  color:#F6AD3C;
+}
+/*警告颜色*/
+.t-color-warning{
+  color:#F9660D;
+}
+.t-color-warning-0{
+  color:#FFE9E0;
+}
+.t-color-warning-1{
+  color:#FE9454;
+}
+.t-color-warning-2-{
+  color:#F9660D;
+}
+/***错误颜色**/
+.t-color-error{
+  color:#F53F3F;
+}
+.t-color-error-0{
+  color:#FFECE8;
+}
+.t-color-error-1{
+  color:#F76560;
+}
+.t-color-error-2{
+  color:#F53F3F;
+}
+/***错误颜色**/
+.t-color-success{
+  color:#23C343
+}
+.t-color-success-0{
+  color:#FFECE8;
+}
+.t-color-success-1{
+  color:#81C88F;
+}
+.t-color-success-2{
+  color:#23C343;
+}
+/***info颜色 蓝**/
+.t-color-info{
+  color:#3491FA
+}
+.t-color-info-0{
+  color:#E5F1FF;
+}
+.t-color-info-1{
+  color:#94C6FF;
+}
+.t-color-info-2{
+  color:#3491FA;
+}
+/**文字色彩**/
+.t-color-font{
+  color:#333;
+}
+.t-color-font-0{
+  color:#eaeaea;
+}
+.t-color-font-1{
+  color:#ccc;
+}
+.t-color-font-2{
+  color:#999;
+}
+.t-color-font-3{
+  color:#666666;
+}
+.t-color-font-4{
+  color:#666666;
+}
+/********************背景颜色**************************/
+/*
+ *   标准颜色
+ * 后缀包含数字 , 从上至下越来越深
+*/
+.t-bg-color-primary{
+  background-color: #1D2088;
+  color: #ffffff;
+}
+.t-bg-color-primary-0{
+  background-color: #E8EDFF;
+  color: #333333;
+}
+.t-bg-color-primary-1{
+  background-color: #B2BBE7;
+  color: #ffffff;
+}
+.t-bg-color-primary-2{
+  background-color: #838DCF;
+  color: #ffffff;
+}
+.t-bg-color-primary-3{
+  background-color: #5A64B8;
+  color: #ffffff;
+}
+.t-bg-color-primary-4{
+  background-color: #383FA0;
+  color: #ffffff;
+}
+.t-bg-color-primary-5{
+  background-color: #1D2088;
+  color: #ffffff;
+}
+.t-bg-color-primary-6{
+  background-color: #131379;
+  color: #ffffff;
+}
+.t-bg-color-primary-7{
+  background-color: #0B055B;
+  color: #ffffff;
+}
+.t-bg-color-primary-8{
+  background-color: #08004D;
+  color: #ffffff;
+}
+/*标准橙色 后缀包含数字 , 从上至下越来越深*/
+.t-bg-color-orange{
+  background-color:#F6AD3C;
+  color: #ffffff;
+}
+.t-bg-color-orange-0{
+  background-color:#FFFAE8;
+  color: #333333;
+}
+.t-bg-color-orange-1{
+  background-color:#FDEEC5;
+  color: #ffffff;
+}
+.t-bg-color-orange-2{
+  background-color:#FBE1A2;
+  color: #ffffff;
+}
+.t-bg-color-orange-3{
+  background-color:#FAD17F;
+  color: #ffffff;
+}
+.t-bg-color-orange-4{
+  background-color:#F8BF5D;
+  color: #ffffff;
+}
+.t-bg-color-orange-5{
+  background-color:#F6AD3C;
+  color: #ffffff;
+}
+/*警告颜色*/
+.t-bg-color-warning{
+  background-color:#F9660D;
+  color: #ffffff;
+}
+.t-bg-color-warning-0{
+  background-color:#FFE9E0;
+  color: #333333;
+}
+.t-bg-color-warning-1{
+  background-color:#FE9454;
+  color: #ffffff;
+}
+.t-bg-color-warning-2-{
+  background-color:#F9660D;
+  color: #ffffff;
+}
+/***错误颜色**/
+.t-bg-color-error{
+  background-color:#F53F3F;
+  color: #ffffff;
+}
+.t-bg-color-error-0{
+  background-color:#FFECE8;
+  color: #333333;
+}
+.t-bg-color-error-1{
+  background-color:#F76560;
+  color: #ffffff;
+}
+.t-bg-color-error-2{
+  background-color:#F53F3F;
+  color: #ffffff;
+}
+/***错误颜色**/
+.t-bg-color-success{
+  background-color:#23C343;
+  color: #ffffff;
+}
+.t-bg-color-success-0{
+  background-color:#FFECE8;
+  color: #333333;
+}
+.t-bg-color-success-1{
+  background-color:#81C88F;
+  color: #ffffff;
+}
+.t-bg-color-success-2{
+  background-color:#23C343;
+  color: #ffffff;
+}
+/***info颜色 蓝**/
+.t-bg-color-info{
+  background-color:#3491FA;
+  color: #ffffff;
+}
+.t-bg-color-info-0{
+  background-color:#E5F1FF;
+  color: #333333;
+}
+.t-bg-color-info-1{
+  background-color:#94C6FF;
+  color: #ffffff;
+}
+.t-bg-color-info-2{
+  background-color:#3491FA;
+  color: #ffffff;
+}
+/**文字色彩**/
+.t-bg-color-font{
+  background-color:#333;
+  color: #ffffff;
+}
+.t-bg-color-font-0{
+  background-color:#eaeaea;
+  color: #333333;
+}
+.t-bg-color-font-1{
+  background-color:#ccc;
+  color: #ffffff;
+}
+.t-bg-color-font-2{
+  background-color:#999;
+  color: #ffffff;
+}
+.t-bg-color-font-3{
+  background-color:#666666;
+  color: #ffffff;
+}
+.t-bg-color-font-4{
+  background-color:#666666;
+  color: #ffffff;
+}
+.t-text-center{
+  text-align: center;
+}
+.t-main{
+  width: 1200px;
+  margin: 0 auto;
+}
+.t-cursor{
+  cursor: pointer;
+}
+a{
+  color: #3491FA;
+}
+.form-body {
+	width: 100%;
+	min-height: calc(100vh - 202px);
+	padding: 24px;
+    overflow-y: auto;
+}
+.footer-button {
+	width: 100%;
+	height: 80px;
+	line-height: 100px;
+	bottom: 0;
+	padding-left: 50px;
+	border-top: 1px solid #e8e8e8;
+}
+.t-item{
+  display: flex;
+  align-items: center;
+}
+.t-item .t-key{
+  width: 84px;
+  white-space: nowrap;
+  color: #999999;
+  margin-right: 20px;
+}
+.t-item .t-val{
+  color: #333333;
+}
+div,p,span{
+  word-break: break-all;
+}
+@media only screen and (min-width: 1140px){
+  .el-form .el-input{
+    max-width: 100%;
+    /*min-width:250px;*/
+    width:15.06944444444444vw !important;
+  }
+  .el-form .el-select{
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 1139px){
+  .el-form .el-input{
+    max-width: 100%;
+    width:250px !important;
+  }
+}
+
+/*
+.el-form .el-input{
+  max-width: 100%;
+  min-width:250px;
+  width:15.06944444444444vw ;
+}
+*/
+
+
+/*ycj*/
+.text-center{
+  text-align: center;
+}
+.text-nowrap{
+  word-break: keep-all
+}
+.text-one{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.c3{
+  color: #333;
+}
+.c6{
+  color: #666;
+}
+.c9{
+  color: #999;
+}
+.f-bold{
+  font-weight: bold;
+}
+.f-12{
+  font-size: 12px;
+}
+.f-14{
+  font-size: 14px;
+}
+.f-16{
+  font-size: 16px;
+}
+.f-18{
+  font-size: 18px;
+}
+.f-20{
+  font-size: 20px;
+}
+.f-22{
+  font-size: 22px;
+}
+.f-24{
+  font-size: 24px;
+}
+.flex{
+  display: flex;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-center{
+  justify-content: center;
+}
+.flex-between{
+  justify-content: space-between;
+}
+.flex-align{
+  align-items: center;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex1{
+  flex: 1;
+}
+.mr-10{
+  margin-right: 10px;
+}
+.mr-20{
+  margin-right: 20px;
+}
+.ml-10{
+  margin-left: 10px;
+}
+.ml-20{
+  margin-left: 20px;
+}
+.mt-10{
+  margin-top: 10px;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mb-10{
+  margin-bottom: 10px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+.el-table__body-wrapper a{
+  cursor: pointer;
+  /* margin-right: 24px ; */
+}
+el-dialog{
+  width: 640px !important;
+
+}
+.el-dialog{
+  width: 640px !important;
+  border-radius: 10px !important;
+}
+.el-dialog__body{
+  padding: 14px 24px !important;
+}
+.bg_rd{
+  background-color: #f2f5ff;
+	border-radius: 14px;
+}
+div,span,p{
+  outline: none !important;
+}
+/*
+   Don't ask me. Why set the zIndex. Because them tester mention the bug.
+   The bug is question of 'element-ui' , but testers require me must change the bug, So , I changed it.
+   If you have any question , Find tester please . Or you can change it yourself.
+   Have a good time.
+*/
+.el-select-dropdown,.el-popper{
+  z-index:1999 !important;
+}
+.el-dropdown-menu{
+  z-index:2001 !important;
+}
+.el-dialog__wrapper{
+  z-index: 3002 !important;
+}
+
+
+.my-content{
+    color: #000 !important;
+}
+.messageIndex {
+  z-index: 99999 !important;
+}

@@ -1,28 +1,56 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <watermark position="absolute" :config="watermark"/>
+    <!-- 一级路由出口 -->
+    <router-view></router-view>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {mapGetters, mapState} from "vuex";
+import Watermark from "./components/Watermark/Watermark";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  computed:{
+    ...mapGetters(["userInfo"]),
+    ...mapState(["watermark"]),
+    // 水印文字
+    watermarkText(){
+      let {userinfo,school_arr} = this.userInfo;
+      let date = (new Date()).Format("yyyy-MM-dd");
+      let school = []
+      school_arr = ["达州市鸿鹄高中"]
+      for (let k in school_arr){
+        if (school.length === 0)
+          school.push(school_arr[k]+"    ");
+        else {
+          school = [];
+          break;
+        }
+      }
+      return  `${school[0]||""}${userinfo.username === "admin" ?"admin":userinfo.username.slice(-4)}    ${date}`
+    },
+  },
+  mounted() {
+
+  },
+  data(){
+    return {
+      watermarkInfo:{
+        size:24,
+        angle:30,
+        color:"#ccc",
+        between:[200,100]
+      },
+      text:""
+    }
+  },
+  components:{
+    watermark:Watermark
   }
 }
 </script>
-
-<style>
+<style lang="scss"  >
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
 }
 </style>

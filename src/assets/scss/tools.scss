@@ -1,0 +1,16 @@
+/// 高度计算
+/// 最低高度 1080
+/// @param 在屏幕分辨率1080下的高度
+/// @return {number} 计算后的结果 单位vh
+@function sh($number){
+  @return calc($number/1080*100)+vh;
+
+}
+
+/// 宽度计算
+/// 最低宽度 1920
+/// @param 在屏幕分辨率1080下的高度
+/// @return {number} 计算后的结果 单位vh
+@function sw($number){
+  @return calc($number / 1920 * 100)+vw;
+}
